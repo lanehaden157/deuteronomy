@@ -6,9 +6,13 @@ contract here.
 
 ## Components ✎
 
-Optional components on: echo, list (`book.json` `"components"`; markup in
-`components-reference.md`). Note here where this book uses each, and which
-handoff box kinds it has.
+Optional components on: echo, list, digest (`book.json` `"components"`; markup
+in `components-reference.md`). **TENTATIVE draft.**
+
+- **echo:** Moses quoting or recasting earlier Torah; NT quotations (Matt 4, 22).
+- **list:** blessing and curse catalogues, the Ten Words, lists of prohibited things.
+- **digest:** units and stretches marked condensed or digest in the unit map.
+- Retelling box kind: **Side by side** (the synoptic box under that label), for the retelling of Horeb, Kadesh and the calf against Exodus–Numbers. Not built yet (core wave 2).
 
 ## Hebrew in English ✎
 
@@ -30,7 +34,13 @@ number; suffixed id (`2416e`) claims exactly one.
 - Structure markers: Masoretic paragraph breaks (`candidate-boundaries.md`).
 - Names are joined by hand: place-name wordplay is real, Strong's etymology
   unreliable.
-- ✎ Genre cautions (lists, law, poetry, …): add as units surface them.
+- ✎ Genre cautions (**TENTATIVE draft**; more as units surface them):
+  - Speech: Moses speaks; mark when a line is Yahweh quoted, Moses' own, or narrator.
+  - Law: state each statute's own reason clause; compare Exodus/Leviticus parallels for differences only.
+  - Poetry (chs. 32–33): lines as the Hebrew parallelism falls; difficult text flagged, not smoothed.
+  - Curses: conditional, rhetorical; present as written.
+  - Numeruswechsel: keep singular/plural "you" visible per `translation-choices.md`.
+  - Verse numbers: English in prose and refs, `[Heb ...]` only where the corpus is addressed.
 
 ## Unit map ✎
 
@@ -38,12 +48,15 @@ From the project side as `deuteronomy-literary-unit-map.md`.
 `python -m biblecore units-from-map` loads its **Overview** table; keep this
 shape:
 
-    | # | Passage | Working title |
-    |---|---|---|
-    | | **PART ONE — Label (1:1–25:18)** | |
-    | | *I. Label (1:1–10:10)* | |
-    | 01 | 1:1–54 | Title |
-    | 17 | 16:36–17:13 [Heb 17:1–28] | Title |
+    | # | Passage | Working title | Tier | Peak |
+    |---|---|---|---|---|
+    | | **SPEECH — Label (1:1–4:40)** | | | |
+    | | *I. Label (4:41–11:32)* | | | |
+    | 01 | 1:1–18 | Title | condensed | |
+    | 07 | 5:1–33 | Title | full | ★ |
+    | 24 | 22:1–30 [Heb 22:1–23:1] | Title | condensed; 22:5–12 full | |
+
+Tier: full, condensed or digest, plus `; <verses> <tier>` stretches. A peak is full.
 
 Bold row opens an outer grouping, italic an inner one; both optional. Passages
 in English numbering, Hebrew difference in `[Heb ...]`.
