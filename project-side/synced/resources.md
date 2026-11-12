@@ -12,4 +12,6 @@ A verse-by-verse commentary in the JPS series: introduction, commentary on Deut 
 
 ## Gaps: not on hand
 
+The commentaries above are the full set; no more are coming. The ones below are reachable only by web search in pass 2.
+
 McConville (Apollos), Block (NIVAC), Weinfeld (Anchor Yale, ch. 1–11), Nelson (OTL), Christensen (WBC), Rashi and Ibn Ezra on Deuteronomy. Weinfeld matters most for the treaty overlay and Deut 5–11. Flag any unit where one of them would materially change the reading; search the web for it in pass 2 and say what you read.
