@@ -1,0 +1,330 @@
+"""Check this book against the core it vendors (review D9).
+
+    python -m biblecore test            # everything
+    python -m biblecore test --quick    # skip the build-idempotence run
+
+The core's own unit tests live in bible-core (tests/run.py), since they
+need Joshua's data as a fixture. This is the book-side half, the
+acceptance checks a book can run on itself:
+
+  pin          book.json "core", CORE_VERSION and the package agree
+  corpus       the word table and reading text load
+  words        data/words/ and lemmas.json agree with the source, read
+               independently (verify_words.py)
+  data         roots.json validates; every data/*.json parses
+  units        every built unit validates (validate step)
+  contracts    every built unit carries a contract stamp no newer than core
+  example      the style reference's worked example (section 8) validates, if it has one
+  mirror       a book that mirrors another: every ref resolves in its corpus, every shared
+               word is in both passages, a strength-3 pair has evidence (nesting and
+               order are reported, not failed)
+  audit        tracked-thread coverage (reported, not a failure)
+  docs         instruction files against their size budgets (reported, not a failure)
+  logs         session_index.md / history/improvements_log.md whose newest core version
+               is older than book.json's pin (reported, not a failure)
+  idempotent   re-running the build's hard steps changes no file (data,
+               units, digest, css/, app/, index.html); anything it would
+               change is reported and put back
+
+Exit 1 if any check fails.
+"""
+import contextlib
+import glob
+import io
+import json
+import os
+import re
+
+from biblecore import __version__, contract
+from biblecore.book import book
+
+FENCE_RE = re.compile(r"```html\n(.*?)```", re.S)
+
+# Instruction files a chat or session reads whole, in KB. Each addition looks
+# reasonable alone, so nothing else notices them adding up. Set just above the
+# files' real sizes: to add a rule, cut one. A book tightens or loosens one
+# with checks.doc_budget_kb (a warning there). For the files core owns the
+# budget is a hard test (tests/test_docs.py); raising one is Lane's call.
+DOC_BUDGET_KB = {"field": 4, "claude": 2, "style_reference": 6,
+                 "translation_choices": 16, "resources": 9,
+                 "card_research": 4.5, "card_verse": 5, "card_build": 2,
+                 "card_condensed": 3, "lens": 3,
+                 "contract": 10, "book_guide": 4.5}
+
+
+def _quiet(fn, *a):
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf):
+        rc = fn(*a)
+    return rc, buf.getvalue()
+
+
+def check_pin():
+    b = book()
+    errs = []
+    pinned = b.cfg.get("core")
+    if pinned != __version__:
+        errs.append(f"book.json pins core {pinned!r}, vendored package is {__version__}")
+    vf = os.path.join(os.path.dirname(os.path.abspath(__file__)), "CORE_VERSION")
+    if os.path.exists(vf):
+        first = open(vf, encoding="utf-8").read().split()[:1]
+        if first != [__version__]:
+            errs.append(f"CORE_VERSION says {first}, package says {__version__}")
+        if "+dirty" in open(vf, encoding="utf-8").read():
+            errs.append("CORE_VERSION is marked +dirty (vendored from uncommitted core)")
+    else:
+        errs.append("biblecore/CORE_VERSION missing (vendor with tools/core_sync.py)")
+    return errs, []
+
+
+def check_corpus():
+    from biblecore import corpus
+    ad = corpus.adapter()
+    words = ad.load_words(book())
+    reading = ad.load_reading(book())
+    if not words or not reading:
+        return ["word table or reading text is empty"], []
+    return [], [f"{len(reading)} verses, {len(words)} words"]
+
+
+def check_words():
+    from biblecore import verify_words
+    return verify_words.check()
+
+
+def check_data():
+    errs = []
+    for p in sorted(glob.glob(os.path.join(book().path("data"), "*.json"))):
+        try:
+            json.load(open(p, encoding="utf-8"))
+        except Exception as exc:
+            errs.append(f"{os.path.basename(p)} doesn't parse: {exc}")
+    from biblecore import roots
+    rc, out = _quiet(roots.main, [])
+    if rc:
+        errs.append("roots.json fails validation:\n" + out.strip())
+    return errs, crlf_notes()
+
+
+def crlf_notes():
+    """Policy files saved with CRLF (an editor, or a script run on Windows
+    without newline="\n") make git warn "CRLF will be replaced by LF" on
+    every commit. The core writes LF itself; this catches the rest."""
+    root = book().root
+    bad = []
+    for pat in ("data/*.json", "retrofit/*.json"):
+        for p in sorted(glob.glob(os.path.join(root, pat))):
+            with open(p, "rb") as fh:
+                if b"\r\n" in fh.read():
+                    bad.append(os.path.relpath(p, root).replace(os.sep, "/"))
+    if not bad:
+        return []
+    return [f"{len(bad)} file(s) have CRLF line endings ({', '.join(bad)}): git warns "
+            f"on every commit. Rewrite them with LF (a script that writes them "
+            f"should open(..., newline=\"\\n\"))"]
+
+
+def check_units():
+    from biblecore import validate_units
+    rc, out = _quiet(validate_units.main, [])
+    if rc:
+        return [ln.strip() for ln in out.splitlines() if "ERROR" in ln or "FAIL" in ln], []
+    last = out.strip().splitlines()[-1] if out.strip() else ""
+    return [], [last]
+
+
+def check_contracts():
+    from biblecore import meta as um
+    errs, notes = [], []
+    legacy = []
+    for row in um._load("units.json")["units"]:
+        if not row.get("built"):
+            continue
+        c = row.get("contract")
+        if contract.is_legacy(c):
+            legacy.append(row["n"])
+        elif c is None:
+            notes.append(f"unit-{row['n']:02d} unstamped (counts as {contract.UNSTAMPED}; "
+                         f"`python -m biblecore migrate` stamps it)")
+        else:
+            errs += [f"unit-{row['n']:02d}: {e}" for e in contract.check_stamp(c)]
+    if legacy:
+        notes.append(f"{len(legacy)} legacy unit(s) boxed as shipped, held to no fragment check "
+                     f"(unit {legacy[0]}" + (f"-{legacy[-1]}" if len(legacy) > 1 else "") + ")")
+    return errs, notes
+
+
+def check_example():
+    from biblecore import meta as um
+    # the book's own example wins; without one, the shared contract's
+    b = book()
+    fence = None
+    for path in (b.path("style_reference"), os.path.join(b.root, "fragment-contract.md")):
+        if not os.path.exists(path):
+            continue
+        text = open(path, encoding="utf-8").read()
+        m = re.search(r"^## [^\n]*Worked example.*?(?=^## |\Z)", text, re.S | re.M | re.I)
+        fence = FENCE_RE.search(m.group(0)) if m else None
+        if fence:
+            break
+    if not fence:
+        return [], ["no ```html worked example in the style reference or fragment-contract.md"]
+    meta = um.parse(fence.group(1))
+    if meta is None:
+        return ["worked example has no unit-meta block"], []
+    # threads/roots in an example needn't exist in this book's registries,
+    # so only the self-contained checks apply
+    errs = [e for e in um.validate(meta) if "data/threads.json" not in e]
+    errs += um.check_endnote_integrity(fence.group(1))
+    errs += um.check_no_native_script(fence.group(1))
+    errs += um.check_no_inline_style(fence.group(1))
+    return [f"example: {e}" for e in errs], []
+
+
+def check_mirror():
+    from biblecore import mirror
+    return mirror.check()
+
+
+def check_audit():
+    from biblecore import audit
+    rc_out = io.StringIO()
+    with contextlib.redirect_stdout(rc_out):
+        problems = audit.audit()
+    n = problems if isinstance(problems, int) else len(problems or [])
+    return [], [f"{n} coverage issue(s)" + (" (run `python -m biblecore audit`)" if n else "")]
+
+
+def check_docs():
+    b = book()
+    paths = {"field": b.path("chat_side"), "claude": os.path.join(b.root, "CLAUDE.md"),
+             "style_reference": b.path("style_reference"),
+             "translation_choices": os.path.join(b.root, "translation-choices.md"),
+             "resources": os.path.join(b.root, "resources.md"),
+             "card_research": os.path.join(b.root, "card-research.md"),
+             "card_verse": os.path.join(b.root, "card-verse.md"),
+             "card_build": os.path.join(b.root, "card-build.md"),
+             "card_condensed": os.path.join(b.root, "card-condensed.md"),
+             "lens": os.path.join(b.root, "lens.md"),
+             "contract": os.path.join(b.root, "fragment-contract.md"),
+             "book_guide": os.path.join(b.root, "biblecore", "BOOK_CLAUDE.md")}
+    budget = {**DOC_BUDGET_KB, **b.check("doc_budget_kb")}
+    over = []
+    for doc, path in paths.items():
+        if path and os.path.exists(path):
+            kb = os.path.getsize(path) / 1000
+            if kb > budget[doc]:
+                over.append(f"{os.path.basename(path)} {kb:.1f} KB, budget {budget[doc]}")
+    return [], ["over budget: " + ", ".join(over) + " -- trim, or move detail out"] if over else []
+
+
+LOG_CORE_RE = re.compile(r"core[^\n]{0,40}?\b(\d+\.\d+\.\d+)\b", re.I)
+
+
+def _vtuple(v):
+    return tuple(int(x) for x in v.split("."))
+
+
+def check_logs():
+    """Warn when a book's log files stop mentioning core at an older version
+    than the pin: the logs have gone stale. Warn only."""
+    b = book()
+    pin = b.cfg.get("core")
+    if not pin or not re.match(r"^\d+\.\d+\.\d+$", str(pin)):
+        return [], []
+    stale = []
+    for name in ("session_index.md", "history/improvements_log.md", "improvements_log.md"):
+        path = os.path.join(b.root, name)
+        if not os.path.exists(path):
+            continue
+        with open(path, encoding="utf-8") as fh:
+            found = LOG_CORE_RE.findall(fh.read())
+        if not found:
+            continue
+        newest = max(found, key=_vtuple)
+        if _vtuple(newest) < _vtuple(pin):
+            stale.append(f"{name} stops at core {newest}, pin is {pin}")
+    return [], (["; ".join(stale) + " -- log the later core changes"] if stale else [])
+
+
+def _snapshot():
+    b = book()
+    paths = glob.glob(os.path.join(b.path("data"), "*.json"))
+    paths += glob.glob(os.path.join(b.path("units"), "unit-*.html"))
+    paths += [b.path("digest")]
+    # the generated stylesheets and app shell (0.11.0): a hand edit or a shell
+    # left behind by a vendor shows up here; theme.css is the book's and the
+    # build never writes it, so including it is harmless
+    paths += glob.glob(os.path.join(b.path("css"), "*.css"))
+    paths += glob.glob(os.path.join(b.root, "app", "*.js"))
+    paths += [os.path.join(b.root, "index.html")]
+    snap = {}
+    for p in paths:
+        if os.path.exists(p):
+            with open(p, "rb") as fh:
+                snap[p] = fh.read()
+    return snap
+
+
+def check_idempotent():
+    from biblecore import build
+    before = _snapshot()
+    failed_at = None
+    try:
+        for name, fn in build.STEPS:
+            rc, _ = _quiet(fn, [])
+            if rc:
+                failed_at = name
+                break
+        after = _snapshot()
+    finally:
+        now = _snapshot()
+        for p, data in before.items():
+            if now.get(p) != data:
+                with open(p, "wb") as fh:
+                    fh.write(data)
+        for p in set(now) - set(before):
+            os.remove(p)
+    if failed_at:
+        return [f"build failed at {failed_at} (run `python -m biblecore build`)"], []
+    changed = sorted(os.path.relpath(p, book().root) for p in set(before) | set(after)
+                     if before.get(p) != after.get(p))
+    if changed:
+        return [f"the build would change {len(changed)} file(s): {', '.join(changed)} -- "
+                f"run `python -m biblecore build` and commit (restored for now)"], []
+    return [], []
+
+
+CHECKS = [
+    ("pin", check_pin),
+    ("corpus", check_corpus),
+    ("words", check_words),
+    ("data", check_data),
+    ("units", check_units),
+    ("contracts", check_contracts),
+    ("example", check_example),
+    ("mirror", check_mirror),
+    ("audit", check_audit),
+    ("docs", check_docs),
+    ("logs", check_logs),
+    ("idempotent", check_idempotent),
+]
+
+
+def main(argv=None):
+    args = list(argv or [])
+    failed = 0
+    for name, fn in CHECKS:
+        if name == "idempotent" and ("--quick" in args or not book().check("test_idempotent")):
+            continue
+        try:
+            errs, notes = fn()
+        except Exception as exc:
+            errs, notes = [f"{type(exc).__name__}: {exc}"], []
+        mark = "FAIL" if errs else "ok"
+        print(f"{mark:4}  {name}" + (f"  ({'; '.join(notes)})" if notes and not errs else ""))
+        for e in errs:
+            print(f"      {e}")
+        failed += bool(errs)
+    print(f"\n{book().name}: {len(CHECKS) - failed} ok, {failed} failed")
+    return 1 if failed else 0

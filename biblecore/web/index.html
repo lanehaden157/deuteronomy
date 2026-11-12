@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{BOOK}} Study</title>
+<meta name="description" content="A literary-canonical study translation of the Book of {{BOOK}}.">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem("bible:theme")||"auto"}catch(e){document.documentElement.dataset.theme="auto"}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- the interlinear's original-script line; fetched only when it shows -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&family=Noto+Serif+Hebrew&display=swap">
+<link rel="stylesheet" href="css/core.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/division.css">
+<link rel="stylesheet" href="css/theme.css">
+</head>
+<body>
+
+<div class="topbar-wrap">
+  <header class="topbar">
+    <div class="inner">
+      <div class="brand">{{BOOK}} <span>· study translation</span></div>
+      <span class="topbar-actions">
+        <span id="mode-pill" class="mode-pill" aria-label="Reading mode"></span>
+        <a href="#/search" class="topbar-link">Search</a>
+        <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="unit-nav">
+          Contents <span id="nav-toggle-ctx"></span>
+        </button>
+        <button id="settings-toggle" class="nav-toggle" aria-expanded="false" aria-controls="settings-panel">
+          Settings
+        </button>
+      </span>
+    </div>
+  </header>
+  <nav id="unit-nav" class="unit-nav" aria-label="all units" hidden></nav>
+  <div id="settings-panel" class="settings-panel" role="menu" aria-label="display settings" hidden>
+    <div class="settings-h">Appearance</div>
+    <div id="setting-appearance" class="settings-modes" aria-label="Appearance"></div>
+    <div class="settings-h">Reading</div>
+    <label class="settings-row settings-switch">
+      <span>Open every note</span>
+      <input type="checkbox" role="switch" id="setting-open-notes">
+    </label>
+    <label class="settings-row settings-switch">
+      <span>Center the text</span>
+      <input type="checkbox" role="switch" id="setting-center-text">
+    </label>
+    <a class="settings-row settings-link" href="#/print">Print the whole study</a>
+  </div>
+</div>
+<div id="nav-backdrop" class="nav-backdrop" hidden></div>
+
+<main id="content" class="wrap" tabindex="-1">
+  <p class="loading">Loading…</p>
+</main>
+
+<nav id="unit-pager" class="unit-pager" aria-label="previous and next unit"></nav>
+
+<a id="fab-prev" class="unit-fab prev" aria-label="Previous unit" hidden>‹</a>
+<a id="fab-next" class="unit-fab next" aria-label="Next unit" hidden>›</a>
+
+<footer id="site-foot" class="site-foot"></footer>
+
+<script type="module" src="app/main.js"></script>
+</body>
+</html>
