@@ -18,8 +18,37 @@ unit is more likely right.
 
 ## Glossary
 
+**TENTATIVE draft; not checked against the commentaries.**
+
 | word | Hebrew (translit.) | rendering | note |
 |---|---|---|---|
+| you (pl.) | -em / attem | y'all | always, as in canon |
+| you (sg.) in speech to Israel | -ka / atta | **open: see Open question** | |
+| the Ten Words | aseret ha-devarim | the Ten Words | not "commandments": 4:13, 10:4 name them words |
+| hear | shema | hear | keep "Hear, O Israel" as the opening formula; hear/do pair noted |
+| today | hayyom | today | the speech's "now"; render every occurrence, don't drop |
+| statutes and rulings | huqqim u-mishpatim | statutes and rulings | fixed pair; don't swap for "laws" |
+| teaching | torah | teaching | 1:5, 4:44; "the Torah" when the written scroll is meant (31:9) |
+| the place | ha-maqom | the place Yahweh will choose | ch. 12 formula; "place" kept so repeats show |
+| fear (Yahweh) | yirʾah | fear | not "revere"; pair with love |
+| love | ʾahavah | love | covenant loyalty sense noted per verse, word unchanged |
+| cling | davaq | cling | 4:4, 10:20, 13:4 |
+| brother | ʾaḥ | brother | fellow Israelite: gloss in a note, not the line |
+| resident foreigner | ger | stranger (proposed) | canon conventions are silent; Lane to confirm vs immigrant / sojourner |
+| devote to destruction | ḥerem | devote to destruction | canon default; no softening |
+| heart | levav | heart | levav and lev both heart |
+| strong hand, outstretched arm | yad ḥazaqah, zeroaʿ netuyah | strong hand, outstretched arm | fixed |
+| rest | menuḥah | rest | the land as rest (12:9) |
+| Moab covenant | berit | covenant | 29:1 "besides the covenant at Horeb" |
+
+
+## Open question: Numeruswechsel (for Lane; nothing decided)
+
+Moses switches between singular "you" (-ka) and plural "you" (-em) with no clear rule. Plural "you" is y'all by convention. Options for the singular:
+
+1. **Plain "you" for singular, y'all for plural.** Shows every switch in the English; matches the canon rule and costs nothing. Risk: readers may over-read switches as meaning, when some are probably style.
+2. **Mark the singular ("you, Israel" or "you (sg.)") at first occurrence in each speech, then plain "you".** Fewer interruptions, but the reader must remember which is which.
+3. **Plain "you" and a flag (note or ◊) only at switches inside a single sentence or paragraph.** Keeps lines clean and flags the shifts that carry weight; needs a call on what counts.
+4. **Singular rendered as "you yourself" or "each of you" when a collective address.** Reads naturally; adds words the Hebrew lacks and blurs sg./pl.
 
 ## Log
-
