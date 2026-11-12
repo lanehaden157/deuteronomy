@@ -3,3 +3,6 @@ __pycache__/
 node_modules/
 out/
 project-side/sync-state.json
+
+# Copyrighted commentaries and their text conversions: local only, never pushed
+sources/
