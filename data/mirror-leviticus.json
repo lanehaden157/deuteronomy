@@ -1,0 +1,396 @@
+{
+  "_note": "Deut 28 with Lev 26 (the two sanction chapters). Seed drafted 2026-11-12 from the verses; every strength is a PROPOSAL for Lane (3 shared words, 2 same beat, 1 thematic). Spans are English numbering. Here = Deuteronomy, other = Leviticus.",
+  "version": 1,
+  "sources": [
+    {
+      "id": "proposal-2026-11-12",
+      "cite": "Builder's reading of Deut 28 and Lev 26 in the Hebrew text (OSHB), compared verse by verse; shared lemma ids were checked by script.",
+      "what": "Pairs and strengths are proposals; Lane decides which to keep and at what strength.",
+      "boundary_note": "Tigay's Excursus 26 (the blessing and curse structure, Deut 28) is only a pointer to where the lists run: blessings 28:1–14, curses 28:15–68."
+    }
+  ],
+  "pairs": [
+    {
+      "id": "T01",
+      "tier": "echo",
+      "here": "Deut 28:1–2",
+      "other": "Lev 26:3",
+      "title": "If you keep the commandments, blessings",
+      "strength": 3,
+      "strength_why": "PROPOSED (builder): Both open the blessings with keeping and doing the commandments.",
+      "shared": [
+        {
+          "label": "commandments / keep / do",
+          "ids": [
+            "4687",
+            "8104",
+            "6213"
+          ],
+          "where": {
+            "here": "Deut 28:1",
+            "other": "Lev 26:3"
+          }
+        }
+      ],
+      "status": "seed",
+      "source": "proposal-2026-11-12"
+    },
+    {
+      "id": "T02",
+      "tier": "echo",
+      "here": "Deut 28:12",
+      "other": "Lev 26:4",
+      "title": "Rain in its season",
+      "strength": 2,
+      "strength_why": "PROPOSED (builder): Same promise (rain given in its season); the word for rain differs, so only 'give' and 'season' are shared.",
+      "shared": [
+        {
+          "label": "give / season / land",
+          "ids": [
+            "5414",
+            "6256",
+            "776"
+          ],
+          "where": {
+            "here": "Deut 28:12",
+            "other": "Lev 26:4"
+          }
+        }
+      ],
+      "status": "seed",
+      "source": "proposal-2026-11-12"
+    },
+    {
+      "id": "T03",
+      "tier": "echo",
+      "here": "Deut 28:7",
+      "other": "Lev 26:7–8",
+      "title": "Enemies fall before you",
+      "strength": 2,
+      "strength_why": "PROPOSED (builder): Same beat: enemies are beaten before Israel; the verbs differ (struck vs fall by the sword).",
+      "shared": [
+        {
+          "label": "enemies / before",
+          "ids": [
+            "341",
+            "6440"
+          ],
+          "where": {
+            "here": "Deut 28:7",
+            "other": "Lev 26:7"
+          }
+        }
+      ],
+      "status": "seed",
+      "source": "proposal-2026-11-12"
+    },
+    {
+      "id": "T04",
+      "tier": "echo",
+      "here": "Deut 28:9",
+      "other": "Lev 26:9",
+      "title": "The LORD establishes you",
+      "strength": 2,
+      "strength_why": "PROPOSED (builder): Same beat: God confirms Israel (a holy people / his covenant); one shared verb, 'establish'.",
+      "shared": [
+        {
+          "label": "establish / raise up",
+          "ids": [
+            "6965"
+          ],
+          "where": {
+            "here": "Deut 28:9",
+            "other": "Lev 26:9"
+          }
+        }
+      ],
+      "status": "seed",
+      "source": "proposal-2026-11-12"
+    },
+    {
+      "id": "T05",
+      "tier": "echo",
+      "here": "Deut 28:48",
+      "other": "Lev 26:13",
+      "title": "The yoke: broken, then iron",
+      "strength": 3,
+      "strength_why": "PROPOSED (builder): Both name a yoke; Lev says God broke its bars, Deut says he puts an iron one on.",
+      "shared": [
+        {
+          "label": "yoke",
+          "ids": [
+            "5923"
+          ],
+          "where": {
+            "here": "Deut 28:48",
+            "other": "Lev 26:13"
+          }
+        }
+      ],
+      "status": "seed",
+      "source": "proposal-2026-11-12"
+    },
+    {
+      "id": "T06",
+      "tier": "echo",
+      "here": "Deut 28:68",
+      "other": "Lev 26:13",
+      "title": "Egypt and slavery reversed",
+      "strength": 3,
+      "strength_why": "PROPOSED (builder): Lev 26:13 brought you out of Egypt so you would not be slaves; Deut 28:68 sends you back to be sold as slaves.",
+      "shared": [
+        {
+          "label": "Egypt / slave",
+          "ids": [
+            "4714",
+            "5650"
+          ],
+          "where": {
+            "here": "Deut 28:68",
+            "other": "Lev 26:13"
+          }
+        }
+      ],
+      "status": "seed",
+      "source": "proposal-2026-11-12"
+    },
+    {
+      "id": "T07",
+      "tier": "echo",
+      "here": "Deut 28:15",
+      "other": "Lev 26:14–15",
+      "title": "But if you will not listen",
+      "strength": 3,
+      "strength_why": "PROPOSED (builder): Both open the curses with not listening and not doing the commandments and statutes.",
+      "shared": [
+        {
+          "label": "listen / commandments",
+          "ids": [
+            "8085",
+            "4687"
+          ],
+          "where": {
+            "here": "Deut 28:15",
+            "other": "Lev 26:14"
+          }
+        },
+        {
+          "label": "statutes",
+          "ids": [
+            "2708"
+          ],
+          "where": {
+            "here": "Deut 28:15",
+            "other": "Lev 26:15"
+          }
+        }
+      ],
+      "status": "seed",
+      "source": "proposal-2026-11-12"
+    },
+    {
+      "id": "T08",
+      "tier": "echo",
+      "here": "Deut 28:22",
+      "other": "Lev 26:16",
+      "title": "Consumption and fever",
+      "strength": 3,
+      "strength_why": "PROPOSED (builder): The same two disease words appear in both lists.",
+      "shared": [
+        {
+          "label": "consumption / fever",
+          "ids": [
+            "7829",
+            "6920"
+          ],
+          "where": {
+            "here": "Deut 28:22",
+            "other": "Lev 26:16"
+          }
+        }
+      ],
+      "status": "seed",
+      "source": "proposal-2026-11-12"
+    },
+    {
+      "id": "T09",
+      "tier": "echo",
+      "here": "Deut 28:38",
+      "other": "Lev 26:16",
+      "title": "Seed sown, others consume it",
+      "strength": 2,
+      "strength_why": "PROPOSED (builder): Same beat (sown seed lost); only 'seed' is shared and the eater differs (locust vs enemies).",
+      "shared": [
+        {
+          "label": "seed",
+          "ids": [
+            "2233"
+          ],
+          "where": {
+            "here": "Deut 28:38",
+            "other": "Lev 26:16"
+          }
+        }
+      ],
+      "status": "seed",
+      "source": "proposal-2026-11-12"
+    },
+    {
+      "id": "T10",
+      "tier": "echo",
+      "here": "Deut 28:25",
+      "other": "Lev 26:17",
+      "title": "Struck before your enemies, you flee",
+      "strength": 3,
+      "strength_why": "PROPOSED (builder): Near word for word: struck before the enemy, and flee (Deut: seven ways; Lev: with none pursuing).",
+      "shared": [
+        {
+          "label": "struck / flee / enemies / before",
+          "ids": [
+            "5062",
+            "5127",
+            "341",
+            "6440"
+          ],
+          "where": {
+            "here": "Deut 28:25",
+            "other": "Lev 26:17"
+          }
+        }
+      ],
+      "status": "seed",
+      "source": "proposal-2026-11-12"
+    },
+    {
+      "id": "T11",
+      "tier": "echo",
+      "here": "Deut 28:23",
+      "other": "Lev 26:19",
+      "title": "Sky and earth as metal",
+      "strength": 3,
+      "strength_why": "PROPOSED (builder): Same image; the metals are swapped (Lev sky iron, soil bronze; Deut sky bronze, earth iron).",
+      "shared": [
+        {
+          "label": "sky / iron",
+          "ids": [
+            "8064",
+            "1270"
+          ],
+          "where": {
+            "here": "Deut 28:23",
+            "other": "Lev 26:19"
+          }
+        }
+      ],
+      "status": "seed",
+      "source": "proposal-2026-11-12",
+      "note": "Tigay points to an Assyrian parallel to this image (figures-tigay item 20); not used here."
+    },
+    {
+      "id": "T12",
+      "tier": "echo",
+      "here": "Deut 28:21",
+      "other": "Lev 26:25",
+      "title": "Pestilence",
+      "strength": 3,
+      "strength_why": "PROPOSED (builder): The same word for pestilence; in Lev it comes with the covenant sword, in Deut it clings until Israel is consumed.",
+      "shared": [
+        {
+          "label": "pestilence",
+          "ids": [
+            "1698"
+          ],
+          "where": {
+            "here": "Deut 28:21",
+            "other": "Lev 26:25"
+          }
+        }
+      ],
+      "status": "seed",
+      "source": "proposal-2026-11-12"
+    },
+    {
+      "id": "T13",
+      "tier": "echo",
+      "here": "Deut 28:53",
+      "other": "Lev 26:29",
+      "title": "Eating the flesh of sons and daughters",
+      "strength": 3,
+      "strength_why": "PROPOSED (builder): Same four words: eat, flesh, sons, daughters. Deut adds the siege and the detail of 28:54–57.",
+      "shared": [
+        {
+          "label": "eat / flesh / sons / daughters",
+          "ids": [
+            "398",
+            "1320",
+            "1121",
+            "1323"
+          ],
+          "where": {
+            "here": "Deut 28:53",
+            "other": "Lev 26:29"
+          }
+        }
+      ],
+      "status": "seed",
+      "source": "proposal-2026-11-12"
+    },
+    {
+      "id": "T14",
+      "tier": "echo",
+      "here": "Deut 28:64",
+      "other": "Lev 26:33",
+      "title": "Scattered among the nations",
+      "strength": 2,
+      "strength_why": "PROPOSED (builder): Same beat (scattering); Deut says 'peoples', Lev 'nations' (the shared word, 'nations', turns up in Deut 28:65).",
+      "status": "seed",
+      "source": "proposal-2026-11-12",
+      "note": "Only 'land' is shared inside these two verses, so no shared entry."
+    },
+    {
+      "id": "T15",
+      "tier": "echo",
+      "here": "Deut 28:65–67",
+      "other": "Lev 26:36–37",
+      "title": "A fearful heart among the enemy",
+      "strength": 2,
+      "strength_why": "PROPOSED (builder): Same beat: terror of heart in exile; Lev adds flight at a leaf's sound, Deut adds no rest and day-and-night dread. Could be a 3 on the shared 'heart'.",
+      "shared": [
+        {
+          "label": "heart",
+          "ids": [
+            "3824"
+          ],
+          "where": {
+            "here": "Deut 28:67",
+            "other": "Lev 26:36"
+          }
+        }
+      ],
+      "status": "seed",
+      "source": "proposal-2026-11-12"
+    },
+    {
+      "id": "T16",
+      "tier": "echo",
+      "here": "Deut 28:26",
+      "other": "Lev 26:22",
+      "title": "Animals",
+      "strength": 1,
+      "strength_why": "PROPOSED (builder): Thematic only: in Lev wild animals rob you of children; in Deut animals eat the corpses.",
+      "status": "seed",
+      "source": "proposal-2026-11-12"
+    },
+    {
+      "id": "T17",
+      "tier": "echo",
+      "here": "Deut 28:37",
+      "other": "Lev 26:32",
+      "title": "Astonishment",
+      "strength": 1,
+      "strength_why": "PROPOSED (builder): Thematic only: in Lev your enemies are astonished at the land; in Deut Israel becomes an astonishment among the peoples.",
+      "status": "seed",
+      "source": "proposal-2026-11-12"
+    }
+  ]
+}

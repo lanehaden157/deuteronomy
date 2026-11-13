@@ -42,6 +42,9 @@
     "words/": {
       "schema": 1
     },
+    "mirror-leviticus.json": {
+      "schema": 1
+    },
     "web/": {
       "schema": 1
     }

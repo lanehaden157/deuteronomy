@@ -13,7 +13,9 @@
   "components": [
     "echo",
     "list",
-    "digest"
+    "digest",
+    "mirror",
+    "lawparallel"
   ],
   "checks": {
     "opens_note_required": true
@@ -25,5 +27,11 @@
   "hub": "https://lanehaden157.github.io/bible/",
   "core": "0.33.0",
   "template": "7f91ee5",
-  "tiers": true
+  "tiers": true,
+  "mirrors": [
+    {
+      "with": "Lev",
+      "file": "mirror-leviticus.json"
+    }
+  ]
 }

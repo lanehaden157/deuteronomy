@@ -15,6 +15,34 @@
       "name": "digest",
       "role": "inline-block",
       "selector": "section.digest"
+    },
+    {
+      "name": "mirror",
+      "role": "verse-aside",
+      "selector": "aside.mirror",
+      "toggle": {
+        "sym": "⇄",
+        "label": "mirror",
+        "each": true,
+        "cls": "mirror-toggle",
+        "labels": {
+          "default": "Mirror"
+        }
+      }
+    },
+    {
+      "name": "lawparallel",
+      "role": "verse-aside",
+      "selector": "aside.lawparallel",
+      "toggle": {
+        "sym": "§",
+        "label": "law parallel",
+        "each": true,
+        "cls": "law-toggle",
+        "labels": {
+          "default": "Law parallel"
+        }
+      }
     }
   ]
 }
