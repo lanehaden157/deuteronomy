@@ -38,6 +38,113 @@ It cannot see: common words (rare cutoff: 20 verses in the Hebrew Bible), links 
   - Exod 33:1 — le-ʾabraham le-yitsḥaq
   - Num 32:11 — le-ʾabraham le-yitsḥaq
 
+### Rare words together in a Torah verse, any order (51)
+
+Two rare words from one verse here that share a Torah verse, not necessarily adjacent or in this order (same frequency caps as the phrases above).
+
+- **be-ʿ̲eber + ba-mmidbar** (H5676 + H4057: across; opposite; east / pasture; desert; speech) — Deut 1:1
+  - Num 21:13 (me-ʿ̲eber, ba-mmidbar)
+- **be-ʿ̲eber + ba-ʿ̲arabah** (H5676 + H6160: across; opposite; east / desert) — Deut 1:1
+  - Num 22:1 (me-ʿ̲eber, be-ʿ̲arbot)
+- **be-ʿ̲eber + ben** (H5676 + H996: across; opposite; east / between; either; or) — Deut 1:1
+  - Num 21:13 (me-ʿ̲eber, ben)
+- **ha-yyarden + ba-ʿ̲arabah** (H3383 + H6160: Jarden / desert) — Deut 1:1
+  - Num 22:1 (le-yarden, be-ʿ̲arbot); Num 26:3 (yarden, be-ʿ̲arbot); Num 26:63 (yarden, be-ʿ̲arbot); Num 31:12 (yarden, ʿ̲arbot); Num 33:48 (yarden, be-ʿ̲arbot); Num 33:49 (ha-yyarden, be-ʿ̲arbot); Num 33:50 (yarden, be-ʿ̲arbot); Num 35:1 (yarden, be-ʿ̲arbot); Num 36:13 (yarden, be-ʿ̲arbot)
+- **ba-mmidbar + ben** (H4057 + H996: pasture; desert; speech / between; either; or) — Deut 1:1
+  - Exod 16:1 (midbar, ben); Num 9:5 (be-midbar, ben); Num 21:13 (ba-mmidbar, ben)
+- **ba-mmidbar + paʾran** (H4057 + H6290: pasture; desert; speech / ornamental; Paran) — Deut 1:1
+  - Gen 21:21 (be-midbar, paʾran); Num 10:12 (mi-mmidbar, paʾran); Num 12:16 (be-midbar, paʾran); Num 13:3 (mi-mmidbar, paʾran); Num 13:26 (midbar, paʾran)
+- **ba-mmidbar + wa-ḥatserot** (H4057 + H2698: pasture; desert; speech / yards; Chatseroth) — Deut 1:1
+  - Num 12:16 (be-midbar, me-ḥatserot)
+- **ben + we-laban** (H996 + H3837: between; either; or / Laban) — Deut 1:1
+  - Gen 30:36 (ben-wo, laban); Gen 31:48 (beni-y, laban); Gen 31:51 (beni-y, laban)
+- **paʾran + wa-ḥatserot** (H6290 + H2698: ornamental; Paran / yards; Chatseroth) — Deut 1:1
+  - Num 12:16 (paʾran, me-ḥatserot)
+- **be-ʾarbaʿ̲im + ʿ̲aśar** (H705 + H6240: forty / ten; -teen; -teenth) — Deut 1:3
+  - Gen 47:28 (we-ʾarbaʿ̲im, ʿ̲eśreh)
+- **be-ʾarbaʿ̲im + ḥodesh** (H705 + H2320: forty / new; month) — Deut 1:3
+  - Num 33:38 (ha-ʾarbaʿ̲im, ba-ḥodesh)
+- **siḥon + ha-ʾemori** (H5511 + H567: tempestuous; Sichon / publicity; mountaineer; Emorite) — Deut 1:4
+  - Num 21:21 (siḥon, ha-ʾemori); Num 21:26 (siḥon, ha-ʾemori); Num 21:29 (siḥon, ʾemori); Num 21:34 (le-siḥon, ha-ʾemori); Num 32:33 (siḥon, ha-ʾemori)
+- **siḥon + be-ḥeshbon** (H5511 + H2809: tempestuous; Sichon / Cheshbon) — Deut 1:4
+  - Num 21:26 (siḥon, ḥeshbon); Num 21:27 (siḥon, ḥeshbon); Num 21:28 (siḥon, me-ḥeshbon); Num 21:34 (le-siḥon, be-ḥeshbon)
+- **siḥon + ʿ̲og** (H5511 + H5747: tempestuous; Sichon / round; Og) — Deut 1:4
+  - Num 32:33 (siḥon, ʿ̲og)
+- **siḥon + ha-bashan** (H5511 + H1316: tempestuous; Sichon / Bashan) — Deut 1:4
+  - Num 32:33 (siḥon, ha-bashan)
+- **ha-ʾemori + be-ḥeshbon** (H567 + H2809: publicity; mountaineer; Emorite / Cheshbon) — Deut 1:4
+  - Num 21:25 (ha-ʾemori, be-ḥeshbon); Num 21:26 (ha-ʾemori, ḥeshbon); Num 21:34 (ha-ʾemori, be-ḥeshbon)
+- **ha-ʾemori + ʿ̲og** (H567 + H5747: publicity; mountaineer; Emorite / round; Og) — Deut 1:4
+  - Num 32:33 (ha-ʾemori, ʿ̲og)
+- **ha-ʾemori + ha-bashan** (H567 + H1316: publicity; mountaineer; Emorite / Bashan) — Deut 1:4
+  - Num 32:33 (ha-ʾemori, ha-bashan)
+- **ʿ̲og + ha-bashan** (H5747 + H1316: round; Og / Bashan) — Deut 1:4
+  - Num 21:33 (ʿ̲og, ha-bashan); Num 32:33 (ʿ̲og, ha-bashan)
+- **ʿ̲og + be-ʾedreʿ̲i** (H5747 + H154: round; Og / mighty; Edrei) — Deut 1:4
+  - Num 21:33 (ʿ̲og, ʾedreʿ̲i)
+- **ha-bashan + be-ʾedreʿ̲i** (H1316 + H154: Bashan / mighty; Edrei) — Deut 1:4
+  - Num 21:33 (ha-bashan, ʾedreʿ̲i)
+- **be-ʿ̲eber + moʾab** (H5676 + H4124: across; opposite; east / from; father; Moab) — Deut 1:5
+  - Num 21:13 (me-ʿ̲eber, moʾab); Num 22:1 (me-ʿ̲eber, moʾab)
+- **ha-yyarden + moʾab** (H3383 + H4124: Jarden / from; father; Moab) — Deut 1:5
+  - Num 22:1 (le-yarden, moʾab); Num 26:3 (yarden, moʾab); Num 26:63 (yarden, moʾab); Num 31:12 (yarden, moʾab); Num 33:48 (yarden, moʾab); Num 33:49 (ha-yyarden, moʾab); Num 33:50 (yarden, moʾab); Num 35:1 (yarden, moʾab); Num 36:13 (yarden, moʾab)
+- **penu + ha-kenaʿ̲aniy** (H6437 + H3669: turn; face; appear / Kenaanite; pedlar) — Deut 1:7
+  - Num 14:25 (penu, we-ha-kenaʿ̲ani)
+- **u-seʿ̲u + ha-ʾemoriy** (H5265 + H567: pull; start / publicity; mountaineer; Emorite) — Deut 1:7
+  - Num 21:13 (nasaʿ̲u, ha-ʾemori)
+- **u-seʿ̲u + ba-ʿ̲arabah** (H5265 + H6160: pull; start / desert) — Deut 1:7
+  - Num 22:1 (wa-yyisʿ̲u, be-ʿ̲arbot); Num 33:48 (wa-yyisʿ̲u, be-ʿ̲arbot)
+- **u-seʿ̲u + u-ba-nnegeb** (H5265 + H5045: pull; start / south; Negeb; Egypt) — Deut 1:7
+  - Gen 12:9 (wa-yyissaʿ̲, ha-nnegba-h); Gen 20:1 (wa-yyissaʿ̲, ha-nnegeb)
+- **u-seʿ̲u + ha-kenaʿ̲aniy** (H5265 + H3669: pull; start / Kenaanite; pedlar) — Deut 1:7
+  - Num 14:25 (u-seʿ̲u, we-ha-kenaʿ̲ani)
+- **ha-ʾemoriy + u-ba-nnegeb** (H567 + H5045: publicity; mountaineer; Emorite / south; Negeb; Egypt) — Deut 1:7
+  - Num 13:29 (we-ha-ʾemoriy, ha-nnegeb)
+- **ha-ʾemoriy + ha-kenaʿ̲aniy** (H567 + H3669: publicity; mountaineer; Emorite / Kenaanite; pedlar) — Deut 1:7
+  - Gen 15:21 (ha-ʾemoriy, ha-kenaʿ̲ani); Exod 3:8 (we-ha-ʾemoriy, ha-kenaʿ̲aniy); Exod 3:17 (we-ha-ʾemoriy, ha-kenaʿ̲aniy); Exod 13:5 (we-ha-ʾemori, ha-kenaʿ̲ani); Exod 23:23 (ha-ʾemoriy, we-ha-kenaʿ̲ani); Exod 33:2 (ha-ʾemori, ha-kenaʿ̲aniy); Exod 34:11 (ha-ʾemoriy, we-ha-kenaʿ̲ani); Num 13:29 (we-ha-ʾemoriy, we-ha-kenaʿ̲aniy)
+- **u-ba-nnegeb + ha-kenaʿ̲aniy** (H5045 + H3669: south; Negeb; Egypt / Kenaanite; pedlar) — Deut 1:7
+  - Num 13:29 (ha-nnegeb, we-ha-kenaʿ̲aniy); Num 21:1 (ha-nnegeb, ha-kenaʿ̲ani); Num 33:40 (ba-nnegeb, ha-kenaʿ̲aniy)
+- **u-reshu + le-ʾabraham** (H3423 + H85: occupy; driving; possessing / Abraham) — Deut 1:8
+  - Gen 21:10 (yirash, le-ʾabraham); Gen 28:4 (le-risht-ka, ʾabraham)
+- **u-reshu + le-yitsḥaq** (H3423 + H3327: occupy; driving; possessing / Jitschak) — Deut 1:8
+  - Gen 21:10 (yirash, yitsḥaq)
+- **u-reshu + u-le-zarʿ̲a-m** (H3423 + H2233: occupy; driving; possessing / seed; fruit; plant) — Deut 1:8
+  - Gen 15:3 (yoresh, zaraʿ̲); Gen 22:17 (we-yirash, zarʿ̲a-ka); Gen 24:60 (we-yirash, zarʿ̲e-ke); Gen 28:4 (le-risht-ka, u-le-zarʿ̲a-ka); Num 14:24 (yorishe-nnah, we-zarʿ̲-wo)
+- **nishbaʿ̲ + le-ʾabraham** (H7650 + H85: be complete; seven; swear / Abraham) — Deut 1:8
+  - Gen 21:24 (ʾishshabeaʿ̲, ʾabraham); Gen 24:9 (wa-yyishshabaʿ̲, ʾabraham); Gen 26:3 (nishbaʿ̲ti, le-ʾabraham); Gen 31:53 (wa-yyishshabaʿ̲, ʾabraham); Gen 50:24 (nishbaʿ̲, le-ʾabraham); Exod 32:13 (nishbaʿ̲ta, le-ʾabraham); Exod 33:1 (nishbaʿ̲ti, le-ʾabraham); Num 32:11 (nishbaʿ̲ti, le-ʾabraham)
+- **nishbaʿ̲ + le-yitsḥaq** (H7650 + H3327: be complete; seven; swear / Jitschak) — Deut 1:8
+  - Gen 26:31 (wa-yyishshabʿ̲u, yitsḥaq); Gen 31:53 (wa-yyishshabaʿ̲, yitsḥaq); Gen 50:24 (nishbaʿ̲, le-yitsḥaq); Exod 32:13 (nishbaʿ̲ta, le-yitsḥaq); Exod 33:1 (nishbaʿ̲ti, le-yitsḥaq); Num 32:11 (nishbaʿ̲ti, le-yitsḥaq)
+- **nishbaʿ̲ + u-le-zarʿ̲a-m** (H7650 + H2233: be complete; seven; swear / seed; fruit; plant) — Deut 1:8
+  - Gen 24:7 (nishbaʿ̲, le-zarʿ̲a-ka); Gen 26:3 (nishbaʿ̲ti, u-le-zarʿ̲a-ka); Exod 32:13 (nishbaʿ̲ta, zarʿ̲a-kem); Exod 33:1 (nishbaʿ̲ti, le-zarʿ̲a-ka)
+- **le-ʾabraham + u-le-zarʿ̲a-m** (H85 + H2233: Abraham / seed; fruit; plant) — Deut 1:8
+  - Gen 17:9 (ʾabraham, we-zarʿ̲a-ka); Gen 21:12 (ʾabraham, zaraʿ̲); Gen 26:3 (le-ʾabraham, u-le-zarʿ̲a-ka); Gen 26:24 (ʾabraham, zarʿ̲a-ka); Gen 28:4 (ʾabraham, u-le-zarʿ̲a-ka); Gen 28:13 (ʾabraham, u-le-zarʿ̲e-ka); Gen 35:12 (le-ʾabraham, u-le-zarʿ̲a-ka); Exod 32:13 (le-ʾabraham, zarʿ̲a-kem); Exod 33:1 (le-ʾabraham, le-zarʿ̲a-ka)
+- **le-yitsḥaq + u-le-zarʿ̲a-m** (H3327 + H2233: Jitschak / seed; fruit; plant) — Deut 1:8
+  - Gen 17:19 (yitsḥaq, le-zarʿ̲-wo); Gen 21:12 (be-yitsḥaq, zaraʿ̲); Gen 28:13 (yitsḥaq, u-le-zarʿ̲e-ka); Gen 35:12 (u-le-yitsḥaq, u-le-zarʿ̲a-ka); Exod 32:13 (le-yitsḥaq, zarʿ̲a-kem); Exod 33:1 (le-yitsḥaq, le-zarʿ̲a-ka)
+- **ʾukal + le-baddi-y** (H3201 + H905: be able; can; could / separation; part; branch) — Deut 1:9
+  - Gen 43:32 (yuklu-n, le-badd-wo); Exod 18:18 (tukal, le-badde-ka); Num 11:14 (ʾukal, le-baddi-y)
+- **hirbah + ke-kokbe** (H7235 + H3556: increase / star; prince) — Deut 1:10
+  - Gen 22:17 (we-harbah, ke-kokbe); Gen 26:4 (we-hirbeti, ke-kokbe); Exod 32:13 (ʾarbeh, ke-kokbe)
+- **hirbah + la-rob** (H7235 + H7230: increase / abundance) — Deut 1:10
+  - Gen 16:10 (harbah, me-rob); Lev 25:16 (tarbeh, rob)
+- **peʿ̲amim + wi-ybarek** (H6471 + H1288: stroke / kneel; bless; curse) — Deut 1:11
+  - Num 24:1 (ke-paʿ̲am, le-barek); Num 24:10 (peʿ̲amim, berakta)
+- **le-baddi-y + u-maśśaʾa-kem** (H905 + H4853: separation; part; branch / burden; tribute; porterage) — Deut 1:12
+  - Num 11:17 (le-badde-ka, be-maśśaʾ)
+- **ḥakamim + u-nebonim** (H2450 + H995: wise / separate; distinguish; understand) — Deut 1:13
+  - Gen 41:33 (we-ḥakam, nabon); Gen 41:39 (we-ḥakam, nabon)
+- **ḥakamim + ʿ̲aśarot** (H2450 + H6235: wise / ten) — Deut 1:15
+  - Exod 36:8 (ḥakam, ʿ̲eśer)
+- **ḥamishshim + ʿ̲aśarot** (H2572 + H6235: fifty / ten) — Deut 1:15
+  - Exod 18:21 (ḥamishshim, ʿ̲aśarot); Exod 18:25 (ḥamishshim, ʿ̲aśarot); Exod 27:12 (ḥamishshim, ʿ̲aśarah); Exod 38:12 (ḥamishshim, ʿ̲aśarah)
+- **shopṭe-kem + ba-ʿ̲et** (H8199 + H6256: judge; sentence; vindicate / time; now; when) — Deut 1:16
+  - Exod 18:22 (we-shapṭu, ʿ̲et); Exod 18:26 (we-shapṭu, ʿ̲et)
+- **shopṭe-kem + ben** (H8199 + H996: judge; sentence; vindicate / between; either; or) — Deut 1:16
+  - Gen 16:5 (yishpoṭ, beni-y); Gen 31:53 (yishpeṭu, bene-nu); Exod 18:16 (we-shapaṭti, ben); Num 35:24 (we-shapṭu, ben)
+- **shopṭe-kem + tsedeq** (H8199 + H6664: judge; sentence; vindicate / right; equity; prosperity) — Deut 1:16
+  - Lev 19:15 (tishpoṭ, be-tsedeq)
+- **taguru + taqribu-n** (H1481 + H7126: turn; sojourn; shrink / approach; bring near) — Deut 1:17
+  - Exod 12:48 (yagur, yiqrab)
+
 ## Rare words (14)
 
 - **wa-ḥatserot** (H2698, yards; Chatseroth) — Deut 1:1; 5 verses in the Hebrew Bible
