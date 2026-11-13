@@ -1,5 +1,5 @@
 {
-  "_note": "Deut 28 with Lev 26 (the two sanction chapters). Seed drafted 2026-11-12 from the verses; every strength is a PROPOSAL for Lane (3 shared words, 2 same beat, 1 thematic). Spans are English numbering. Here = Deuteronomy, other = Leviticus.",
+  "_note": "Deut 28 with Lev 26 (the two sanction chapters). Lane decided the pairs and strengths on 2026-11-12 (3 shared words, 2 same beat, 1 thematic). Leviticus' mirror-deuteronomy.json carries the same set from the other side. Spans are English numbering. Here = Deuteronomy, other = Leviticus.",
   "version": 1,
   "sources": [
     {
@@ -389,6 +389,17 @@
       "title": "Astonishment",
       "strength": 1,
       "strength_why": "PROPOSED (builder): Thematic only: in Lev your enemies are astonished at the land; in Deut Israel becomes an astonishment among the peoples.",
+      "status": "seed",
+      "source": "proposal-2026-11-12"
+    },
+    {
+      "id": "T18",
+      "tier": "echo",
+      "here": "Deut 28:1–68",
+      "other": "Lev 26:3–45",
+      "title": "Blessings, then escalating curses",
+      "strength": 2,
+      "strength_why": "Same frame: blessings for keeping the commandments, then curses for not listening, in stages (Lev: four rounds of 'seven times'; Deut: three runs of curses, 28:15–44, 45–57, 58–68).",
       "status": "seed",
       "source": "proposal-2026-11-12"
     }
