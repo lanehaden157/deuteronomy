@@ -114,7 +114,7 @@ Grouped by Moses' speeches, using the book's own superscriptions (1:1–5; 4:44�
 | 04 | 3:12–29 | Num 32; 27:12–23 | Excursus 2 |
 | 07 | 5:6–21 | Exod 20:2–17 | pp. 62–67 |
 | 11 | 9:7–10:11 | Exod 32–34 | Excursus 12, p. 445 |
-| 34 | 32:48–52 | Num 27:12–14 | candidate, not in the plan's list |
+| 34 | 32:48–52 | Num 27:12–14 | p. 316 |
 | 35 | 33:1–29 | Gen 49 | Excursus 33, pp. 519–525 |
 
 ## Treaty overlay (data, nothing built)
