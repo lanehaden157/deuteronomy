@@ -28,4 +28,4 @@ Every unit's meta has `digest`; a digest stretch is `section.block.digest`, a co
 
 Precedence: Lane in chat > this field > the book's style reference > card and `fragment-contract.md` > handoff > reference files. Conflict → flag to Lane, don't resolve silently. Names follow the book's transliteration convention (Moshe, Aharon, Yahweh).
 
-✎ Box kinds this book has, and anything it does differently from the cards.
+Box kinds in Deuteronomy: story (an earlier event the speech points back to without retelling it: Miriam, Amalek, Baal Peor), Side by side (the synoptic box: Moshe's retelling of an event Exodus–Numbers narrates, e.g. Horeb, Kadesh, the calf), echo, mirror (only for a pair the unit pack's mirror section gives), lawparallel (a law restated elsewhere in the Torah). No OT-pointer box. Type-scene → the story box when it's told, else a meta entry.

@@ -6,13 +6,19 @@ contract here.
 
 ## Components ✎
 
-Optional components on: echo, list, digest (`book.json` `"components"`; markup
-in `components-reference.md`). **TENTATIVE draft.**
+On: echo, list, digest, story, synoptic, mirror, lawparallel (`book.json`
+`"components"`; markup in `components-reference.md`).
 
 - **echo:** Moses quoting or recasting earlier Torah; NT quotations (Matt 4, 22).
 - **list:** blessing and curse catalogues, the Ten Words, lists of prohibited things.
 - **digest:** units and stretches marked condensed or digest in the unit map.
-- Retelling box kind: **Side by side** (the synoptic box under that label), for the retelling of Horeb, Kadesh and the calf against Exodus–Numbers. Not built yet (core wave 2).
+- **story:** an earlier event the speech points back to without retelling it
+  (Miriam 24:9, Amalek 25:17–19, Baal Peor 4:3, Sodom and Gomorrah 29:23,
+  Dathan and Abiram 11:6).
+- **Side by side** (the synoptic box under that label): Moses' retelling of an
+  event Exodus–Numbers narrates (Horeb, Kadesh, the calf).
+- **mirror:** the Leviticus twin, only for a pair the unit pack's mirror section gives.
+- **lawparallel:** a law restated elsewhere in the Torah (`laws.json`).
 
 ## Hebrew in English ✎
 
