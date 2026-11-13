@@ -246,13 +246,14 @@ function wireNavToggle() {
 
 function chip(u) {
   const d = overlayOf(u.n);
+  const ds = overlaysOf(u.n);
   const a = document.createElement("a");
   a.className = "unit-chip" + (u.built ? "" : " unbuilt") + (d ? " in-disc" : "");
   a.dataset.slug = u.slug;
   if (u.built) a.href = `#/${u.slug}`;
-  if (d) a.title = `${groupLabel(d)} — ${groupName(d)}`;
+  if (d) a.title = ds.map((x) => `${overlayLabel(x)}${overlayVerses(x, u.n)}`).join("; ");
   a.innerHTML =
-    (d ? `<span class="disc-mark" aria-hidden="true">◆&nbsp;${roman(d.n)}</span>` : "") +
+    (d ? `<span class="disc-mark" aria-hidden="true">◆&nbsp;${ds.map((x) => roman(x.n)).join("·")}</span>` : "") +
     `<span class="n">${u.n}</span>${escapeHtml(u.title)}` +
     `<span class="passage">${escapeHtml(u.passage)}${u.built ? "" : " · not yet built"}</span>`;
   return a;
@@ -266,9 +267,20 @@ function groupLabel(g) {
   return `${kind} ${roman(g.n)}`.trim();
 }
 function groupName(g) { return g.label || g.name || ""; }
-function kindPlural(k) { return k ? k[0].toUpperCase() + k.slice(1) + "s" : ""; }
+function kindPlural(k) { return k ? k[0].toUpperCase() + k.slice(1).replace(/y$/, "ie") + "s" : ""; }
 
 function overlayOf(n) { return overlays.find((d) => d.units.includes(n)) || null; }
+/* with verse ranges (book.json "overlay_note"): a unit may sit in several
+   elements, each naming the verses it holds in this unit */
+function overlaysOf(n) { return overlays.filter((d) => d.units.includes(n)); }
+function overlayLabel(d) {
+  const kind = d.kind ? d.kind[0].toUpperCase() + d.kind.slice(1) : "";
+  return `${kind}: ${groupName(d)}`;
+}
+function overlayVerses(d, n) {
+  const v = d.verses && d.verses[String(n)];
+  return v ? ` (${v})` : "";
+}
 
 /* Units bucketed by the primary grouping; one unnamed bucket when the book
    has no groupings. */
@@ -332,16 +344,30 @@ function buildBookMap() {
       brs.className = "bm-brackets";
       brs.style.gridTemplateColumns = cols;
       const first = us[0].n;
+      // an element's units may be apart: one bracket per run of neighbours,
+      // and a bracket that would cover another goes on a row of its own
+      const taken = [];
       for (const d of overlays) {
-        const inHere = d.units.filter((n) => us.some((u) => u.n === n));
-        if (!inHere.length) continue;
-        const el = document.createElement("div");
-        el.className = "bm-disc";
-        el.style.gridColumn = `${Math.min(...inHere) - first + 1} / ${Math.max(...inHere) - first + 2}`;
-        el.innerHTML = `<span class="bm-disc-bar"></span>` +
-          `<span class="bm-disc-label">◆&nbsp;${roman(d.n)}</span>`;
-        el.title = `${groupLabel(d)} — ${groupName(d)} (Units ${d.units.join(", ")})`;
-        brs.appendChild(el);
+        const inHere = d.units.filter((n) => us.some((u) => u.n === n)).sort((a, b) => a - b);
+        const runs = [];
+        for (const n of inHere) {
+          const last = runs[runs.length - 1];
+          if (last && last[last.length - 1] === n - 1) last.push(n); else runs.push([n]);
+        }
+        for (const run of runs) {
+          const lo = run[0], hi = run[run.length - 1];
+          let r = 0;
+          while ((taken[r] || []).some(([a, b]) => lo <= b && hi >= a)) r++;
+          (taken[r] = taken[r] || []).push([lo, hi]);
+          const el = document.createElement("div");
+          el.className = "bm-disc";
+          el.style.gridColumn = `${lo - first + 1} / ${hi - first + 2}`;
+          el.style.gridRow = String(r + 1);
+          el.innerHTML = `<span class="bm-disc-bar"></span>` +
+            `<span class="bm-disc-label">◆&nbsp;${roman(d.n)}</span>`;
+          el.title = `${overlayLabel(d)} (Units ${d.units.map((n) => n + overlayVerses(d, n)).join(", ")})`;
+          brs.appendChild(el);
+        }
       }
       grp.appendChild(brs);
     }
@@ -365,6 +391,12 @@ function buildBookMap() {
             `<span class="bm-key-item"><b>◆&nbsp;${roman(d.n)}</b> ${escapeHtml(groupName(d))}</span>`).join("") +
           `</span></div>`
         : "");
+    if (overlays.length && bookInfo.overlay_note) {
+      const note = document.createElement("p");
+      note.className = "bm-key-note";
+      note.textContent = bookInfo.overlay_note;
+      key.appendChild(note);
+    }
     wrap.appendChild(key);
   }
   return wrap;
@@ -620,8 +652,7 @@ function renderPlacement(root, unit) {
   const d = overlayOf(unit.n);
   let txt = mv ? `${groupLabel(mv)} · ${groupName(mv)}` : "";
   if (d) {
-    const pos = d.units.length > 1 ? ` (${d.units.indexOf(unit.n) + 1} of ${d.units.length})` : "";
-    txt += `${txt ? " — " : ""}◆ ${groupLabel(d)}: ${groupName(d)}${pos}`;
+    txt += `${txt ? " — " : ""}` + overlaysOf(unit.n).map((x) => `◆ ${overlayLabel(x)}${overlayVerses(x, unit.n)}`).join("; ");
   }
   if (!txt) return;
   const el = document.createElement("div");

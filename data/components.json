@@ -17,6 +17,20 @@
       "selector": "section.digest"
     },
     {
+      "name": "synoptic",
+      "role": "verse-aside",
+      "selector": "aside.synoptic",
+      "toggle": {
+        "sym": "✧",
+        "label": "synoptic parallel",
+        "each": true,
+        "cls": "syn-toggle",
+        "labels": {
+          "default": "Side by side"
+        }
+      }
+    },
+    {
       "name": "mirror",
       "role": "verse-aside",
       "selector": "aside.mirror",

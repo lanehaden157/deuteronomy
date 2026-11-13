@@ -9,11 +9,16 @@
     "pin": "morphhb@2.0.2",
     "word_ids": true
   },
-  "groupings": [],
+  "groupings": [
+    "speech",
+    "treaty",
+    "part"
+  ],
   "components": [
     "echo",
     "list",
     "digest",
+    "synoptic",
     "mirror",
     "lawparallel"
   ],
@@ -33,5 +38,10 @@
       "with": "Lev",
       "file": "mirror-leviticus.json"
     }
-  ]
+  ],
+  "overlay": "treaty",
+  "overlay_note": "The treaty pattern, borrowed from ancient Near Eastern loyalty agreements, fits the passages that demand Israel's loyalty to Yahweh: the Horeb commands, the ratification, the blessings and curses. It does not fit the social laws of chapters 12\u201326, whose model is a king instructing his own people.",
+  "component_labels": {
+    "synoptic": "Side by side"
+  }
 }

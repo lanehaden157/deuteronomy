@@ -1,7 +1,680 @@
 {
   "_note": "Unit registry. groupings[] entries are {kind, n, name, label?, span, units}; each unit row carries an integer per grouping kind (e.g. \"movement\": 2). The first kind listed drives the site's book map. Filled from the unit map once the project side delivers it.",
   "book": "Deuteronomy",
-  "unit_count": 0,
-  "groupings": [],
-  "units": []
+  "unit_count": 36,
+  "groupings": [
+    {
+      "kind": "part",
+      "n": 1,
+      "name": "horeb-covenant",
+      "label": "The Horeb covenant and the great commandment",
+      "span": "5:1–11:28",
+      "units": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "kind": "part",
+      "n": 2,
+      "name": "statutes-and-rulings",
+      "label": "Statutes and rulings",
+      "span": "11:29–26:15",
+      "units": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ]
+    },
+    {
+      "kind": "part",
+      "n": 3,
+      "name": "conclusion",
+      "label": "Conclusion: commitment, Ebal, blessings and curses",
+      "span": "26:16–29:1",
+      "units": [
+        29,
+        30
+      ]
+    },
+    {
+      "kind": "speech",
+      "n": 1,
+      "name": "first-speech-looking-back",
+      "label": "FIRST SPEECH — Looking back: what Yahweh has done",
+      "span": "1:1–4:40",
+      "units": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "kind": "speech",
+      "n": 2,
+      "name": "between-the-speeches-refuge",
+      "label": "BETWEEN THE SPEECHES — Refuge cities and the new heading",
+      "span": "4:41–49",
+      "units": [
+        6
+      ]
+    },
+    {
+      "kind": "speech",
+      "n": 3,
+      "name": "second-speech-the-covenant",
+      "label": "SECOND SPEECH — The covenant made in Moab",
+      "span": "5:1–29:1",
+      "units": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ]
+    },
+    {
+      "kind": "speech",
+      "n": 4,
+      "name": "third-speech-into",
+      "label": "THIRD SPEECH — Into the covenant",
+      "span": "29:2–30:20",
+      "units": [
+        31,
+        32
+      ]
+    },
+    {
+      "kind": "speech",
+      "n": 5,
+      "name": "last-acts-handover-song",
+      "label": "LAST ACTS — Handover, song, blessing, death",
+      "span": "31:1–34:12",
+      "units": [
+        33,
+        34,
+        35,
+        36
+      ]
+    },
+    {
+      "kind": "treaty",
+      "n": 1,
+      "name": "past-benefactions",
+      "label": "Past benefactions as the ground of loyalty",
+      "units": [
+        1,
+        2,
+        3,
+        4,
+        31
+      ],
+      "verses": {
+        "1": "1:6–18",
+        "2": "1:19–2:1",
+        "3": "2:2–3:11",
+        "4": "3:12–29",
+        "31": "29:2–9"
+      }
+    },
+    {
+      "kind": "treaty",
+      "n": 2,
+      "name": "basic-stipulations",
+      "label": "Basic stipulations (Horeb)",
+      "units": [
+        7
+      ],
+      "verses": {
+        "7": "5:6–21"
+      }
+    },
+    {
+      "kind": "treaty",
+      "n": 3,
+      "name": "detailed-stipulations",
+      "label": "Detailed stipulations, with their introduction",
+      "units": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "verses": {
+        "7": "5:1–5; 5:22–33",
+        "13": "12:2–32"
+      }
+    },
+    {
+      "kind": "treaty",
+      "n": 4,
+      "name": "exclusive-loyalty",
+      "label": "Exclusive loyalty, in treaty wording",
+      "units": [
+        8
+      ],
+      "verses": {
+        "8": "6:4–9"
+      }
+    },
+    {
+      "kind": "treaty",
+      "n": 5,
+      "name": "mutual-commitment",
+      "label": "Mutual commitment",
+      "units": [
+        29
+      ],
+      "verses": {
+        "29": "26:16–19"
+      }
+    },
+    {
+      "kind": "treaty",
+      "n": 6,
+      "name": "ratification",
+      "label": "Ratification ceremony",
+      "units": [
+        29,
+        31
+      ],
+      "verses": {
+        "29": "27:1–26",
+        "31": "29:10–15"
+      }
+    },
+    {
+      "kind": "treaty",
+      "n": 7,
+      "name": "blessings-curses",
+      "label": "Blessings and curses",
+      "units": [
+        30
+      ],
+      "verses": {
+        "30": "28:1–68"
+      }
+    },
+    {
+      "kind": "treaty",
+      "n": 8,
+      "name": "witnesses",
+      "label": "Witnesses: heaven and earth",
+      "units": [
+        5,
+        32,
+        33
+      ],
+      "verses": {
+        "5": "4:26",
+        "32": "30:19",
+        "33": "31:28"
+      }
+    },
+    {
+      "kind": "treaty",
+      "n": 9,
+      "name": "deposit-reading",
+      "label": "Deposit and public reading",
+      "units": [
+        11,
+        33
+      ],
+      "verses": {
+        "11": "10:1–5",
+        "33": "31:9–13; 31:24–26"
+      }
+    }
+  ],
+  "units": [
+    {
+      "n": 1,
+      "slug": "unit-01",
+      "passage": "Deuteronomy 1:1–18",
+      "title": "From Horeb to the border; judges appointed",
+      "speech": 1,
+      "tier": "condensed",
+      "built": false,
+      "digest": "In Moab in the fortieth year, Moses begins to speak. He recalls Yahweh's order to leave Horeb and take the land promised to the fathers, and how, with the people too many for him to carry alone, he set wise men over them as chiefs and judges, charged to judge fairly and fear no one."
+    },
+    {
+      "n": 2,
+      "slug": "unit-02",
+      "passage": "Deuteronomy 1:19–2:1",
+      "title": "Kadesh: the refusal",
+      "speech": 1,
+      "tier": "condensed",
+      "built": false,
+      "digest": "Moses retells Kadesh. The scouts praised the land, but the people refused to go up, saying Yahweh hated them; he swore that none of that generation but Caleb and Joshua would see it, and that even Moses would not enter because of them. Their late attack failed, and they turned back to the wilderness."
+    },
+    {
+      "n": 3,
+      "slug": "unit-03",
+      "passage": "Deuteronomy 2:2–3:11",
+      "title": "Past Edom, Moab, Ammon; Sihon and Og",
+      "speech": 1,
+      "tier": "condensed",
+      "built": false,
+      "digest": "Israel passes by Edom, Moab and Ammon, whose lands Yahweh gave them, buying food and water as they go. The old generation dies out. Sihon of Heshbon refuses passage and falls; Og of Bashan follows, with sixty walled cities, and his iron bed is remembered."
+    },
+    {
+      "n": 4,
+      "slug": "unit-04",
+      "passage": "Deuteronomy 3:12–29",
+      "title": "Transjordan portions; Moses barred",
+      "speech": 1,
+      "tier": "condensed",
+      "built": false,
+      "digest": "Moses gives the land east of the Jordan to Reuben, Gad and half Manasseh, on condition that their men cross armed ahead of the others. He tells Joshua not to fear. He pleads to cross and see the good land; Yahweh refuses, lets him look from Pisgah, and names Joshua to lead."
+    },
+    {
+      "n": 5,
+      "slug": "unit-05",
+      "passage": "Deuteronomy 4:1–40",
+      "title": "Hear: no form at Horeb, Yahweh alone is God",
+      "speech": 1,
+      "tier": "full",
+      "peak": true,
+      "built": false,
+      "digest": "Moses urges Israel to keep the laws, adding nothing and taking nothing away. At Horeb they heard a voice but saw no form, so they must make no image of anything. If they turn to idols they will be scattered, yet if they seek Yahweh there he will be found. No other god ever took a nation for himself: Yahweh alone is God."
+    },
+    {
+      "n": 6,
+      "slug": "unit-06",
+      "passage": "Deuteronomy 4:41–49",
+      "title": "Three cities of refuge; the new heading",
+      "speech": 2,
+      "tier": "digest",
+      "built": false,
+      "digest": "Moses sets apart three refuge cities east of the Jordan for anyone who kills a neighbour unintentionally. Then a new heading introduces the teaching Moses set before Israel in the valley near Beth-peor, in the land taken from Sihon and Og."
+    },
+    {
+      "n": 7,
+      "slug": "unit-07",
+      "passage": "Deuteronomy 5:1–33",
+      "title": "The Ten Words",
+      "part": 1,
+      "speech": 3,
+      "tier": "full",
+      "peak": true,
+      "built": false,
+      "digest": "Yahweh made a covenant with this generation at Horeb, speaking face to face out of the fire. Moses repeats the Ten Words, with the Sabbath grounded in slavery in Egypt. Afraid, the people asked Moses to hear the rest for them; Yahweh approved, and wished they would always fear him so."
+    },
+    {
+      "n": 8,
+      "slug": "unit-08",
+      "passage": "Deuteronomy 6:1–25",
+      "title": "Hear, O Israel: the Shema",
+      "part": 1,
+      "speech": 3,
+      "tier": "full",
+      "peak": true,
+      "built": false,
+      "digest": "Hear, Israel: Yahweh our God, Yahweh is one, and you shall love him with all your heart, soul and strength. These words are to be taught to children, spoken everywhere, bound on hand and forehead and written on doorposts. In the good land, do not forget him or test him, and when a child asks, tell the story of Egypt."
+    },
+    {
+      "n": 9,
+      "slug": "unit-09",
+      "passage": "Deuteronomy 7:1–26",
+      "title": "A holy people; devote them to destruction",
+      "part": 1,
+      "speech": 3,
+      "tier": "condensed",
+      "built": false,
+      "digest": "When Yahweh brings Israel into the land they must devote its seven nations to destruction, make no treaties or marriages, and destroy their altars. Israel is a holy people chosen not for its size but because Yahweh loved them and kept his oath. He will drive the nations out little by little."
+    },
+    {
+      "n": 10,
+      "slug": "unit-10",
+      "passage": "Deuteronomy 8:1–20",
+      "title": "Remember the wilderness; not by bread alone",
+      "part": 1,
+      "speech": 3,
+      "tier": "full",
+      "built": false,
+      "digest": "Remember the forty years: Yahweh humbled and fed you with manna, so that you would know people do not live on bread alone. In a rich land, when you have eaten and are full, do not forget him or say your own strength won this. Forget him and you will perish like the nations."
+    },
+    {
+      "n": 11,
+      "slug": "unit-11",
+      "passage": "Deuteronomy 9:1–10:11",
+      "title": "Stiff-necked: the calf and the second tablets",
+      "part": 1,
+      "speech": 3,
+      "tier": "condensed",
+      "built": false,
+      "digest": "Israel will take the land not because of its righteousness but because of the nations' wickedness. Moses recalls how stiff-necked they were: the golden calf at Horeb, the broken tablets, his forty days of prayer, the rebellions at other places. Yahweh relented, gave new tablets for the ark, and set apart Levi."
+    },
+    {
+      "n": 12,
+      "slug": "unit-12",
+      "passage": "Deuteronomy 10:12–11:28",
+      "title": "What Yahweh asks; circumcised hearts; blessing and curse",
+      "part": 1,
+      "speech": 3,
+      "tier": "full",
+      "peak": true,
+      "built": false,
+      "digest": "What does Yahweh ask? To fear him, walk in his ways, love and serve him, and keep his commands. Circumcise your hearts, and love the stranger as he does. The land drinks rain from heaven that he gives if they obey. Moses sets a blessing and a curse before them."
+    },
+    {
+      "n": 13,
+      "slug": "unit-13",
+      "passage": "Deuteronomy 11:29–12:32",
+      "title": "Gerizim and Ebal; one place, one altar",
+      "part": 2,
+      "speech": 3,
+      "tier": "condensed",
+      "built": false,
+      "digest": "Proclaim the blessing on Gerizim and the curse on Ebal. In the land, tear down the nations' shrines and bring offerings only to the place Yahweh will choose, rejoicing there with households and Levites. Meat may be eaten anywhere, without the blood. Do not imitate how the nations served their gods."
+    },
+    {
+      "n": 14,
+      "slug": "unit-14",
+      "passage": "Deuteronomy 13:1–18",
+      "title": "Enticers to other gods",
+      "part": 2,
+      "speech": 3,
+      "tier": "condensed",
+      "built": false,
+      "digest": "Even if a prophet's sign comes true, do not follow a call to other gods: Yahweh is testing you. The prophet dies. A brother, child, wife or friend who entices in secret must not be spared. A town led astray is to be devoted to destruction and never rebuilt."
+    },
+    {
+      "n": 15,
+      "slug": "unit-15",
+      "passage": "Deuteronomy 14:1–21",
+      "title": "A holy people: mourning and food",
+      "part": 2,
+      "speech": 3,
+      "tier": "condensed",
+      "built": false,
+      "digest": "As children of Yahweh, Israel must not gash themselves or shave for the dead. Moses lists the animals, fish and birds they may eat and those they may not, and bans eating what dies of itself and boiling a kid in its mother's milk."
+    },
+    {
+      "n": 16,
+      "slug": "unit-16",
+      "passage": "Deuteronomy 14:22–15:18",
+      "title": "Tithe, release, the poor and slaves",
+      "part": 2,
+      "speech": 3,
+      "tier": "condensed",
+      "built": false,
+      "digest": "Tithe the harvest and eat it before Yahweh; every third year store it for the Levite, stranger, orphan and widow. Every seventh year cancel debts. Lend freely to the poor, even near the release year. A Hebrew servant goes free after six years, sent off generously, unless he chooses to stay."
+    },
+    {
+      "n": 17,
+      "slug": "unit-17",
+      "passage": "Deuteronomy 15:19–16:17",
+      "title": "Firstlings and the three pilgrim feasts",
+      "part": 2,
+      "speech": 3,
+      "tier": "condensed",
+      "built": false,
+      "digest": "Firstborn male animals belong to Yahweh and are eaten at the chosen place. Three times a year all males come there: Passover with unleavened bread, Weeks, and Booths, rejoicing with servants, Levites, strangers, orphans and widows, and none comes empty-handed."
+    },
+    {
+      "n": 18,
+      "slug": "unit-18",
+      "passage": "Deuteronomy 16:18–17:13",
+      "title": "Judges and courts",
+      "part": 2,
+      "speech": 3,
+      "tier": "condensed",
+      "built": false,
+      "digest": "Appoint judges in every town who do not pervert justice or take bribes; plant no sacred pole or pillar. Anyone who serves other gods is put to death on two or three witnesses. Hard cases go to the priests and the judge at the chosen place, whose ruling must be followed."
+    },
+    {
+      "n": 19,
+      "slug": "unit-19",
+      "passage": "Deuteronomy 17:14–20",
+      "title": "The king",
+      "part": 2,
+      "speech": 3,
+      "tier": "full",
+      "built": false,
+      "digest": "If Israel wants a king, he must be one Yahweh chooses, a fellow Israelite. He must not multiply horses, wives or silver and gold, nor send the people back to Egypt. He is to write a copy of this teaching, read it all his life, and not lift himself above his brothers."
+    },
+    {
+      "n": 20,
+      "slug": "unit-20",
+      "passage": "Deuteronomy 18:1–22",
+      "title": "Levites and the prophet like Moses",
+      "part": 2,
+      "speech": 3,
+      "tier": "condensed",
+      "built": false,
+      "digest": "Levitical priests have no land; Yahweh and the offerings are their share. Israel must not practise divination or sorcery as the nations do. Yahweh will raise a prophet like Moses from among them, put his words in his mouth, and hold to account anyone who will not listen. A word that does not come true was not his."
+    },
+    {
+      "n": 21,
+      "slug": "unit-21",
+      "passage": "Deuteronomy 19:1–21",
+      "title": "Refuge, boundary stones and witnesses",
+      "part": 2,
+      "speech": 3,
+      "tier": "condensed",
+      "built": false,
+      "digest": "Set apart three refuge cities, and three more if the land grows, so that the one who kills by accident may flee there; a deliberate murderer is handed to the avenger. Do not move a neighbour's boundary stone. One witness is not enough; a false witness suffers what he planned for another."
+    },
+    {
+      "n": 22,
+      "slug": "unit-22",
+      "passage": "Deuteronomy 20:1–21:9",
+      "title": "War rules; the unsolved killing",
+      "part": 2,
+      "speech": 3,
+      "tier": "digest",
+      "built": false,
+      "digest": "Before battle, priests encourage the army and officers send home the man with a new house, vineyard or wife, and the fearful. Offer peace to distant cities; devote the nearby nations to destruction. Spare fruit trees in a siege. For an unsolved killing, the elders of the nearest town break a heifer's neck and wash their hands, declaring their innocence."
+    },
+    {
+      "n": 23,
+      "slug": "unit-23",
+      "passage": "Deuteronomy 21:10–23",
+      "title": "Captive wife, firstborn, rebel son, the hanged",
+      "part": 2,
+      "speech": 3,
+      "tier": "condensed",
+      "built": false,
+      "digest": "A captive woman taken as a wife must be allowed to mourn and may not be sold. The firstborn son's double share stands even if his mother is unloved. A defiant son is brought before the elders and stoned. An executed man hung on a tree must be buried that day, for a hanged man is cursed by God."
+    },
+    {
+      "n": 24,
+      "slug": "unit-24",
+      "passage": "Deuteronomy 22:1–29",
+      "title": "Neighbour and household laws; sexual cases",
+      "part": 2,
+      "speech": 3,
+      "tier": "condensed",
+      "built": false,
+      "digest": "Return a neighbour's lost animal or property, and help lift a fallen one. A list of household rules follows: clothing, birds' nests, roof parapets, mixtures, tassels. Then sexual cases: a husband's false charge against his bride, adultery, a betrothed woman in town or field, and the seized unbetrothed girl."
+    },
+    {
+      "n": 25,
+      "slug": "unit-25",
+      "passage": "Deuteronomy 22:30–23:25",
+      "title": "Father's wife; the assembly; camp, vows, loans",
+      "part": 2,
+      "speech": 3,
+      "tier": "condensed",
+      "built": false,
+      "digest": "A man must not take his father's wife. Some are barred from Yahweh's assembly; Edomites and Egyptians may enter in the third generation. Keep the camp clean, for Yahweh walks in it. Shelter the escaped slave, charge no interest to an Israelite, pay vows promptly, and eat from a neighbour's vineyard or field without carrying any away."
+    },
+    {
+      "n": 26,
+      "slug": "unit-26",
+      "passage": "Deuteronomy 24:1–22",
+      "title": "Divorce, pledges, justice for the vulnerable",
+      "part": 2,
+      "speech": 3,
+      "tier": "condensed",
+      "built": false,
+      "digest": "A divorced wife who remarries may not return to the first husband. The newly married man is free from war for a year. Take no millstone in pledge and do not enter a house to seize a pledge. Pay wages the same day. Each dies for his own sin. Leave gleanings for the stranger, orphan and widow: remember you were slaves."
+    },
+    {
+      "n": 27,
+      "slug": "unit-27",
+      "passage": "Deuteronomy 25:1–19",
+      "title": "Flogging, levirate, honest weights, Amalek",
+      "part": 2,
+      "speech": 3,
+      "tier": "digest",
+      "built": false,
+      "digest": "A guilty man's flogging is limited to forty strokes. Do not muzzle a threshing ox. A brother-in-law should marry his dead brother's widow, or be shamed before the elders. Keep honest weights. Remember what Amalek did on the road from Egypt, and blot out its memory."
+    },
+    {
+      "n": 28,
+      "slug": "unit-28",
+      "passage": "Deuteronomy 26:1–15",
+      "title": "Firstfruits and tithe: the two declarations",
+      "part": 2,
+      "speech": 3,
+      "tier": "full",
+      "peak": true,
+      "built": false,
+      "digest": "In the land, bring the first fruits to the chosen place and declare before Yahweh: my father was a wandering Aramean, who went down to Egypt and became a nation; Yahweh brought us out and gave us this land. In the third year, after giving the tithe to the poor, declare that it was given as commanded."
+    },
+    {
+      "n": 29,
+      "slug": "unit-29",
+      "passage": "Deuteronomy 26:16–27:26",
+      "title": "Today a people; stones on Ebal; the Shechem curses",
+      "part": 3,
+      "speech": 3,
+      "tier": "full",
+      "built": false,
+      "digest": "Today Israel declares Yahweh its God and Yahweh declares Israel his treasured people. After crossing, they are to set up plastered stones on Mount Ebal, write the teaching on them and build an altar. Six tribes stand on Gerizim, six on Ebal, and the Levites pronounce twelve curses, each answered with amen."
+    },
+    {
+      "n": 30,
+      "slug": "unit-30",
+      "passage": "Deuteronomy 28:1–29:1",
+      "title": "Blessings and curses; the covenant's subscription",
+      "part": 3,
+      "speech": 3,
+      "tier": "full",
+      "peak": true,
+      "built": false,
+      "digest": "Obey, and blessings will overtake you in town and field, in children, crops and battle. Disobey, and curses will come: disease, drought, defeat, siege, exile and a return to Egypt in ships. These are the terms of the covenant made in Moab, beside the one made at Horeb."
+    },
+    {
+      "n": 31,
+      "slug": "unit-31",
+      "passage": "Deuteronomy 29:2–29",
+      "title": "Entering the covenant today",
+      "speech": 4,
+      "tier": "full",
+      "built": false,
+      "digest": "Moses calls Israel together: you saw what Yahweh did in Egypt and the wilderness, yet he had not given you a heart to understand. All of them, with children and strangers and those not yet born, now enter the covenant. Anyone who turns away in secret will meet its curses. The hidden things belong to Yahweh; the revealed are ours to do."
+    },
+    {
+      "n": 32,
+      "slug": "unit-32",
+      "passage": "Deuteronomy 30:1–20",
+      "title": "Return, nearness, choose life",
+      "speech": 4,
+      "tier": "full",
+      "peak": true,
+      "built": false,
+      "digest": "When the blessing and curse have come and Israel returns to Yahweh from exile, he will gather them and circumcise their hearts. The command is not too hard or far away; the word is very near, in mouth and heart. Moses sets life and death before them and calls heaven and earth to witness: choose life."
+    },
+    {
+      "n": 33,
+      "slug": "unit-33",
+      "passage": "Deuteronomy 31:1–30",
+      "title": "Joshua commissioned; the scroll; the song commanded",
+      "speech": 5,
+      "tier": "condensed",
+      "built": false,
+      "digest": "Moses, now 120, tells Israel that Joshua will lead them across, and charges Joshua to be strong. He writes the teaching and gives it to the priests to read every seventh year at Booths. Yahweh foretells Israel's unfaithfulness and orders a song as witness against them. The book is laid beside the ark."
+    },
+    {
+      "n": 34,
+      "slug": "unit-34",
+      "passage": "Deuteronomy 32:1–52",
+      "title": "The Song of Moses; Nebo foretold",
+      "speech": 5,
+      "tier": "full",
+      "peak": true,
+      "built": false,
+      "digest": "Moses' song calls heaven and earth to hear. Yahweh, the Rock, found Israel in the wilderness and fed them; fat Jeshurun kicked and chose other gods, so he will hide his face and punish. Yet he will not let enemies boast, and will avenge his servants. Then Yahweh tells Moses to climb Mount Nebo and die there."
+    },
+    {
+      "n": 35,
+      "slug": "unit-35",
+      "passage": "Deuteronomy 33:1–29",
+      "title": "The Blessing of Moses",
+      "speech": 5,
+      "tier": "condensed",
+      "built": false,
+      "digest": "Before his death Moses blesses the tribes. Yahweh came from Sinai and gave a teaching; Reuben, Judah, Levi, Benjamin, Joseph, Zebulun and Issachar, Gad, Dan, Naphtali and Asher each receive a word, Simeon none. Happy is Israel, saved by Yahweh, its shield and sword."
+    },
+    {
+      "n": 36,
+      "slug": "unit-36",
+      "passage": "Deuteronomy 34:1–12",
+      "title": "The death of Moses",
+      "speech": 5,
+      "tier": "full",
+      "peak": true,
+      "built": false,
+      "digest": "Moses climbs Nebo, and Yahweh shows him the whole land promised to the fathers. He dies there in Moab and Yahweh buries him; no one knows the grave. Israel mourns thirty days; Joshua, full of wisdom, leads. No prophet has since arisen like Moses, whom Yahweh knew face to face."
+    }
+  ]
 }

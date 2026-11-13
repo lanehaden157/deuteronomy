@@ -8,8 +8,8 @@
   "versification": "kjv",
   "core": "0.35.0",
   "hub": "https://lanehaden157.github.io/bible/",
-  "overlay": null,
-  "unit_count": 0,
+  "overlay": "treaty",
+  "unit_count": 36,
   "units_built": 0,
   "files": {
     "units.json": {
@@ -49,5 +49,6 @@
       "schema": 1
     }
   },
-  "tiers": true
+  "tiers": true,
+  "overlay_note": "The treaty pattern, borrowed from ancient Near Eastern loyalty agreements, fits the passages that demand Israel's loyalty to Yahweh: the Horeb commands, the ratification, the blessings and curses. It does not fit the social laws of chapters 12–26, whose model is a king instructing his own people."
 }
